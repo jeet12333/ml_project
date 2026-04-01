@@ -202,8 +202,3 @@ Key packages (see `requirements.txt`):
 4. Test thoroughly
 5. Submit pull request
 
-## License
-[Add license information]
-
-## Contact
-[Add contact information]
