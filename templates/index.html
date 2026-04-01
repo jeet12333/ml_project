@@ -1,1 +1,161 @@
-<h1>Welcome to the home page</h1>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Student Exam Performance Indicator</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}" />
+</head>
+<body>
+
+  <div class="cursor"></div>
+  <div class="cursor-ring"></div>
+  <div class="scan-line"></div>
+  <canvas id="neural-canvas"></canvas>
+
+  <div class="page-wrapper">
+
+    <header class="site-header">
+      <div class="logo">SEPI<span>.</span>AI</div>
+      <div class="nav-badge">STUDENT EXAM PERFORMANCE INDICATOR</div>
+      <div class="status-dot">SYSTEM ONLINE</div>
+    </header>
+
+    <main class="hero">
+      <!-- Orbit Rings -->
+      <div class="hero-orbit">
+        <div class="orbit-ring ring-1"></div>
+        <div class="orbit-ring ring-2"></div>
+        <div class="orbit-dot d1"></div>
+        <div class="orbit-dot d2"></div>
+      </div>
+
+      <p class="hero-eyebrow">AI-Powered Academic Intelligence Platform</p>
+
+      <h1 class="hero-title">
+        <span class="line1">Welcome to the</span>
+        <span class="line2">Home Page</span>
+      </h1>
+
+      <p class="hero-subtitle">
+        Predict student mathematics scores using advanced ML regression models. Input academic and demographic data — let the AI reveal precise performance insights.
+      </p>
+
+      <div class="cta-wrapper">
+        <a href="/predictdata">
+          <button class="cta-button">
+            <span class="btn-sweep"></span>
+            Predict Data
+            <svg class="cta-icon" viewBox="0 0 24 24">
+              <line x1="5" y1="12" x2="19" y2="12"/>
+              <polyline points="12 5 19 12 12 19"/>
+            </svg>
+          </button>
+        </a>
+      </div>
+
+      <!-- Algorithm tags -->
+      <div class="algo-tags">
+        <span class="atag">Random Forest</span>
+        <span class="atag">Gradient Boost</span>
+        <span class="atag">Linear Regression</span>
+        <span class="atag">CatBoost</span>
+        <span class="atag">XGBoost</span>
+      </div>
+    </main>
+
+    <!-- FEATURES -->
+    <section class="features-section">
+      <div class="section-header">
+        <span class="section-label">Core Capabilities</span>
+        <h2 class="section-title">Student Performance Indicator</h2>
+        <p class="section-sub">Six analytical dimensions powering the prediction engine</p>
+      </div>
+
+      <div class="features-grid">
+        <div class="feature-card">
+          <div class="feature-icon icon-blue">
+            <svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2">
+              <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
+              <circle cx="9" cy="7" r="4"/>
+              <path d="M23 21v-2a4 4 0 0 0-3-3.87"/>
+              <path d="M16 3.13a4 4 0 0 1 0 7.75"/>
+            </svg>
+          </div>
+          <div class="feature-title">Gender &amp; Demographics</div>
+          <p class="feature-desc">Analyse performance patterns across gender groups and ethnic backgrounds for inclusive, unbiased predictions.</p>
+          <div class="card-corner"></div>
+        </div>
+
+        <div class="feature-card">
+          <div class="feature-icon icon-cyan">
+            <svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2">
+              <path d="M22 10v6M2 10l10-5 10 5-10 5z"/>
+              <path d="M6 12v5c3 3 9 3 12 0v-5"/>
+            </svg>
+          </div>
+          <div class="feature-title">Parental Education</div>
+          <p class="feature-desc">Correlate parental education levels — high school to master's degree — with student academic outcomes.</p>
+          <div class="card-corner"></div>
+        </div>
+
+        <div class="feature-card">
+          <div class="feature-icon icon-purple">
+            <svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2">
+              <circle cx="12" cy="12" r="10"/>
+              <path d="M12 8v4l3 3"/>
+            </svg>
+          </div>
+          <div class="feature-title">Lunch &amp; Nutrition</div>
+          <p class="feature-desc">Socioeconomic and nutrition indicators via lunch type are factored into the predictive model pipeline.</p>
+          <div class="card-corner"></div>
+        </div>
+
+        <div class="feature-card">
+          <div class="feature-icon icon-blue">
+            <svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2">
+              <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
+              <polyline points="14 2 14 8 20 8"/>
+              <line x1="16" y1="13" x2="8" y2="13"/>
+              <line x1="16" y1="17" x2="8" y2="17"/>
+            </svg>
+          </div>
+          <div class="feature-title">Test Preparation</div>
+          <p class="feature-desc">Measure the academic impact of test-prep courses — completed vs none — on predicted maths performance.</p>
+          <div class="card-corner"></div>
+        </div>
+
+        <div class="feature-card">
+          <div class="feature-icon icon-cyan">
+            <svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2">
+              <polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/>
+            </svg>
+          </div>
+          <div class="feature-title">Reading &amp; Writing Scores</div>
+          <p class="feature-desc">Cross-subject analysis — reading and writing scores are the strongest predictors of maths ability.</p>
+          <div class="card-corner"></div>
+        </div>
+
+        <div class="feature-card">
+          <div class="feature-icon icon-purple">
+            <svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2">
+              <line x1="18" y1="20" x2="18" y2="10"/>
+              <line x1="12" y1="20" x2="12" y2="4"/>
+              <line x1="6" y1="20" x2="6" y2="14"/>
+            </svg>
+          </div>
+          <div class="feature-title">ML Score Prediction</div>
+          <p class="feature-desc">Regression-based ML model outputs a precise predicted maths score (0–100) with high accuracy and low error margin.</p>
+          <div class="card-corner"></div>
+        </div>
+      </div>
+    </section>
+
+    <footer class="site-footer">
+      &copy; 2025 &nbsp;|&nbsp; STUDENT EXAM PERFORMANCE INDICATOR &nbsp;|&nbsp; BUILT WITH PYTHON &amp; FLASK
+    </footer>
+  </div>
+
+  <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+</body>
+</html>
